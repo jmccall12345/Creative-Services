@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>CSS Tool Kit</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, minimal-ui" />
+    <!--<link rel="dns-prefetch" href="//fonts.googleapis.com" />-->
+    <!--<link href='//fonts.googleapis.com/css?family=Roboto:400,100,400italic,700italic,700' rel='stylesheet' type='text/css'>-->
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Knockout Scripts-->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/3.1.0/knockout-min.js"></script>
+
+    <!-- Dynamic Text -->
+    <script>
+        window.onload= function() {
+            // Here's my data model
+            var ViewModel = function (first) {
+                this.firstLine = ko.observable(first);
+
+
+                this.fullLine = ko.computed(function () {
+                    // Knockout tracks dependencies automatically. It knows that fullName depends on firstName and lastName, because these get called when evaluating fullName.
+                    return this.firstLine();
+                }, this);
+            };
+
+            ko.applyBindings(new ViewModel("")); // This makes Knockout get to work
+        };
+    </script>
+
+</head>
+<body class="animated fadeInDown">
+<!--<p>Change Text: <input data-bind='value: firstLine' /></p>-->
+<!--<h2> <span data-bind='text: fullLine'> </span></h2>-->
+<header class="site__header island">
+    <div class="wrap">
+        <p><input data-bind='value: firstLine' class="butt2" type="text" placeholder="Type Something Cool..." /></p>
+
+<br>
+        <!--<span id="animationSandbox" data-bind="" style="display: block;"><h1 class="site__title mega">GE Capital Bank</h1></span>-->
+       <h1><span id="animationSandbox" data-bind="text: fullLine" class="site__title" style="display: block; "> </span></h1>
+<br>
+        <span class="beta subhead"></span>
+    </div>
+</header><!-- /.site__header -->
+
+<main class="site__content island" role="content">
+    <div class="wrap">
+        <p>
+            <select class="input input--dropdown js--animations">
+                <optgroup label="Attention Seekers">
+                    <option value="bounce">bounce</option>
+                    <option value="flash">flash</option>
+                    <option value="pulse">pulse</option>
+                    <option value="rubberBand">rubberBand</option>
+                    <option value="shake">shake</option>
+                    <option value="swing">swing</option>
+                    <option value="tada">tada</option>
+                    <option value="wobble">wobble</option>
+                </optgroup>
+
+                <optgroup label="Bouncing Entrances">
+                    <option value="bounceIn">bounceIn</option>
+                    <option value="bounceInDown">bounceInDown</option>
+                    <option value="bounceInLeft">bounceInLeft</option>
+                    <option value="bounceInRight">bounceInRight</option>
+                    <option value="bounceInUp">bounceInUp</option>
+                </optgroup>
+
+                <optgroup label="Bouncing Exits">
+                    <option value="bounceOut">bounceOut</option>
+                    <option value="bounceOutDown">bounceOutDown</option>
+                    <option value="bounceOutLeft">bounceOutLeft</option>
+                    <option value="bounceOutRight">bounceOutRight</option>
+                    <option value="bounceOutUp">bounceOutUp</option>
+                </optgroup>
+
+                <optgroup label="Fading Entrances">
+                    <option value="fadeIn">fadeIn</option>
+                    <option value="fadeInDown">fadeInDown</option>
+                    <option value="fadeInDownBig">fadeInDownBig</option>
+                    <option value="fadeInLeft">fadeInLeft</option>
+                    <option value="fadeInLeftBig">fadeInLeftBig</option>
+                    <option value="fadeInRight">fadeInRight</option>
+                    <option value="fadeInRightBig">fadeInRightBig</option>
+                    <option value="fadeInUp">fadeInUp</option>
+                    <option value="fadeInUpBig">fadeInUpBig</option>
+                </optgroup>
+
+                <optgroup label="Fading Exits">
+                    <option value="fadeOut">fadeOut</option>
+                    <option value="fadeOutDown">fadeOutDown</option>
+                    <option value="fadeOutDownBig">fadeOutDownBig</option>
+                    <option value="fadeOutLeft">fadeOutLeft</option>
+                    <option value="fadeOutLeftBig">fadeOutLeftBig</option>
+                    <option value="fadeOutRight">fadeOutRight</option>
+                    <option value="fadeOutRightBig">fadeOutRightBig</option>
+                    <option value="fadeOutUp">fadeOutUp</option>
+                    <option value="fadeOutUpBig">fadeOutUpBig</option>
+                </optgroup>
+
+                <optgroup label="Flippers">
+                    <option value="flip">flip</option>
+                    <option value="flipInX">flipInX</option>
+                    <option value="flipInY">flipInY</option>
+                    <option value="flipOutX">flipOutX</option>
+                    <option value="flipOutY">flipOutY</option>
+                </optgroup>
+
+                <optgroup label="Lightspeed">
+                    <option value="lightSpeedIn">lightSpeedIn</option>
+                    <option value="lightSpeedOut">lightSpeedOut</option>
+                </optgroup>
+
+                <optgroup label="Rotating Entrances">
+                    <option value="rotateIn">rotateIn</option>
+                    <option value="rotateInDownLeft">rotateInDownLeft</option>
+                    <option value="rotateInDownRight">rotateInDownRight</option>
+                    <option value="rotateInUpLeft">rotateInUpLeft</option>
+                    <option value="rotateInUpRight">rotateInUpRight</option>
+                </optgroup>
+
+                <optgroup label="Rotating Exits">
+                    <option value="rotateOut">rotateOut</option>
+                    <option value="rotateOutDownLeft">rotateOutDownLeft</option>
+                    <option value="rotateOutDownRight">rotateOutDownRight</option>
+                    <option value="rotateOutUpLeft">rotateOutUpLeft</option>
+                    <option value="rotateOutUpRight">rotateOutUpRight</option>
+                </optgroup>
+
+                <optgroup label="Sliders">
+                    <option value="slideInDown">slideInDown</option>
+                    <option value="slideInLeft">slideInLeft</option>
+                    <option value="slideInRight">slideInRight</option>
+                    <option value="slideOutLeft">slideOutLeft</option>
+                    <option value="slideOutRight">slideOutRight</option>
+                    <option value="slideOutUp">slideOutUp</option>
+                </optgroup>
+
+                <optgroup label="Specials">
+                    <option value="hinge">hinge</option>
+                    <option value="rollIn">rollIn</option>
+                    <option value="rollOut">rollOut</option>
+                </optgroup>
+            </select>
+
+            <button class="butt js--triggerAnimation">Animate it</button>
+        </p>
+        <hr />
+
+</main><!-- /.site__content -->
+<p>Shiny Button CSS3</p>
+<a href="#" class="button">
+    <span class="shine"></span>
+    <span class="text">Open as Account</span>
+</a>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script>
+    function testAnim(x) {
+        $('#animationSandbox').removeClass().addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend shine', function(){
+            $(this).removeClass();
+        });
+    };
+
+    $(document).ready(function(){
+        $('.js--triggerAnimation').click(function(){
+            var anim = $('.js--animations').val();
+            testAnim(anim);
+        });
+
+        $('.js--animations').change(function(){
+            var anim = $(this).val();
+            testAnim(anim);
+        });
+    });
+
+</script>
+
+</body>
+</html>

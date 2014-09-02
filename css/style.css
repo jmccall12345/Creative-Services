@@ -1,0 +1,348 @@
+/*-----------------------------------*\
+  $RESET
+\*-----------------------------------*/
+
+*, :before, :after {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+input, select, button, textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    font: inherit;
+    color: inherit;
+}
+
+/*-----------------------------------*\
+  $OBJECTS
+\*-----------------------------------*/
+
+.butt, .input {
+    padding: .75rem;
+    margin: .375rem;
+
+    background-color: transparent;
+    border-radius: 4px;
+}
+
+.butt:focus, .input:focus {
+    outline: none;
+}
+
+.butt {
+    border: 2px solid #f35626;
+    line-height: 1.375;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+
+    font-weight: 700;
+
+    color: #f35626;
+
+    cursor: pointer;
+    -webkit-animation: hue 60s infinite linear;
+}
+
+.butt--primary {
+    background-color: #f35626;
+    color: #fff;
+}
+
+input.butt2 {
+    height: 50px;
+    width: 300px;
+	position: relative;
+    left: -46px;
+}
+
+.input {
+    border: 1px solid #c0c8c9;
+    border-radius: 4px;
+}
+
+.input--dropdown {
+    /*background-image: url("images/ddown.png");*/
+    /*background-image: url("images/ddown.svg?3"), none;*/
+    background-repeat: no-repeat;
+    background-size: 1.5rem 1rem;
+    background-position: right center;
+}
+
+/*-----------------------------------*\
+  $TYPOGRAPHY
+\*-----------------------------------*/
+
+.font-face {
+    font-family: 'GEInspiraRegular';
+    src: url('/fonts/ge_inspira-webfont.eot');
+    src: url('../fonts/ge_inspira-webfont.eot?#iefix') format('embedded-opentype'), url('') format('woff'), url('../assets/fonts/ge_inspira-webfont.ttf') format('truetype'), url('../assets/fonts/ge_inspira-webfont.svg#glyphicons-halflingsregular') format('svg');
+}
+.font-face {
+    font-family: 'GEInspiraMedium';
+    src: url('../fonts/ge_inspira_medium-webfont.eot');
+    src: url('../assets/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('') format('woff'), url('../assets/fonts/ge_inspira_medium-webfont.ttf') format('truetype'), url('../assets/fonts/ge_inspira_medium-webfont.svg#glyphicons-halflingsregular') format('svg');
+}
+
+h1, .alpha {
+    margin-bottom: 1.5rem;
+
+    font-size: 3rem;
+    font-weight: 100;
+    line-height: 1;
+    letter-spacing: -.05em;
+}
+
+h2, .beta {
+    margin-bottom: .75rem;
+
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+@media (min-width: 650px) {
+    .mega {
+        font-size: 5rem;
+        line-height: 1;
+    }
+}
+
+.subhead, .meta {
+    color: #7b8993;
+}
+
+.promo {
+    text-align: center;
+}
+
+p, hr {
+    margin-bottom: 1.5rem;
+}
+
+hr {
+    border: none;
+    margin-top: -1px;
+    height: 1px;
+    background-color: #c0c8c9;
+    background-image: -webkit-linear-gradient(0deg, #fff, #c0c8c9, #fff);
+}
+
+a {
+    color: inherit;
+    text-decoration: underline;
+    -webkit-animation: hue 60s infinite linear;
+}
+
+a:hover {
+    color: #f35626;
+}
+
+/*-----------------------------------*\
+  $LAYOUT
+\*-----------------------------------*/
+
+.wrap {
+    max-width: 38rem;
+    margin: 0 auto;
+}
+
+.island {
+    padding: 1.5rem;
+}
+
+.isle {
+    padding: .75rem;
+}
+
+.spit {
+    padding: .375rem;
+}
+
+/*-----------------------------------*\
+  $BASE
+\*-----------------------------------*/
+
+html {
+    font: 100%/1.5 "Roboto", Verdana, sans-serif;
+    color: #3d464d;
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+    width: 100%;
+
+    overflow: hidden-x;
+
+    /* Centering in The Unknown */
+    text-align: center;
+}
+
+@media (min-width: 650px) {
+    html {
+        height: 100%;
+    }
+
+    html:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -0.25em;
+    }
+
+    body {
+        display: inline-block;
+        vertical-align: middle;
+        max-width: 38rem;
+    }
+}
+
+/*-----------------------------------*\
+  $HEADER
+\*-----------------------------------*/
+
+.site__header {
+
+}
+
+.site__title {
+    color: #f35626;
+    background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: hue 60s infinite linear;
+}
+
+/*-----------------------------------*\
+  $ANIMATIONS
+\*-----------------------------------*/
+
+@-webkit-keyframes hue {
+    from {
+        -webkit-filter: hue-rotate(0deg);
+    }
+
+    to {
+        -webkit-filter: hue-rotate(-360deg);
+    }
+}
+/*-----------------------------------*\
+  $inputs
+\*-----------------------------------*/
+input[type=text], textarea {
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid #DDDDDD;
+    border: 1px solid #c0c8c9;
+    border-radius: 4px;
+
+}
+
+input[type=text]:focus, textarea:focus {
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid rgba(81, 203, 238, 1);
+    border: 1px solid #c0c8c9;
+    border-radius: 4px;
+}
+/*-----------------------------------*\
+  $button
+\*-----------------------------------*/
+a.button {
+    width: 200px;
+    height: 50px;
+    background: rgb(255,102,0);
+    display: block;
+    position: relative;
+    margin: 50px auto 0;
+    overflow: hidden;
+    border: 1px solid rgb(255,102,0);
+    color: white;
+    text-decoration: none;
+    text-align: center;
+
+    -webkit-box-shadow: inset 0px 1px 1px 0px rgba(255,255,255,.4);
+    -moz-box-shadow: inset 0px 1px 1px 0px rgba(255,255,255,.4);
+    box-shadow: inset 0px 1px 1px 0px rgba(255,255,255,.4);
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+
+
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+
+    background-image: -webkit-linear-gradient(bottom, #ff6600 0%, #ff6600  49%, #ff6600  50%, #ff6600  100%);
+    background-image: -moz-linear-gradient(bottom, #ff6600  0%, #ff6600  49%, #ff6600  50%, #ff6600  100%);
+    background-image: -ms-linear-gradient(bottom, #ff6600  0%, #ff6600  49%, #ff6600  50%, #ff6600 100%);
+    background-image: -o-linear-gradient(bottom, #ff6600  0%, #ff6600  49%, #ff6600  50%, #ff6600  100%);
+    background-image: linear-gradient(bottom, #ff6600 0%, #ff6600  49%, #ff6600  50%, #ff6600 100%);
+}
+
+a.button span.text {
+    position: absolute;
+    top: 13px;
+    left: 20px;
+    font: 20px sans-serif;
+    font-weight: bold;
+}
+
+a.button span.shine {
+    content: '';
+    position: absolute;
+    height: 400px;
+    width: 20px;
+    background: white;
+    top: -80px;
+    left: -20px;
+    display: block;
+    opacity: 0.8;
+
+    -webkit-box-shadow: 0px 0px 20px 10px white;
+    -moz-box-shadow: 0px 0px 20px 10px white;
+    box-shadow: 0px 0px 20px 10px white;
+
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+a.button:hover {
+    -webkit-box-shadow: inset 0px 1px 10px 0px rgba(255,255,255,.4), 0px 3px 3px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: inset 0px 1px 10px 0px rgba(255,255,255,.4), 0px 3px 3px 0px rgba(0,0,0,0.4);
+    box-shadow: inset 0px 1px 10px 0px rgba(255,255,255,.4), 0px 3px 3px 0px rgba(0,0,0,0.4);
+}
+
+a.button:active {
+    -webkit-box-shadow: inset 0px 1px 15px 0px rgba(0,0,0,.4), inset 0px 1px 1px 1px rgba(0,0,0,.2), 0px 1px 1px 0 rgba(255,255,255,.5);
+    -moz-box-shadow: inset 0px 1px 15px 0px rgba(0,0,0,.4), inset 0px 1px 1px 1px rgba(0,0,0,.2), 0px 1px 1px 0 rgba(255,255,255,.5);
+    box-shadow: inset 0px 1px 15px 0px rgba(0,0,0,.4), inset 0px 1px 1px 1px rgba(0,0,0,.2), 0px 1px 1px 0 rgba(255,255,255,.5);
+}
+
+a.button:hover span.shine {
+    left: 170px;
+    top: -300px;
+}
